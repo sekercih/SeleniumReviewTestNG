@@ -1,11 +1,10 @@
 package com.techproed.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -34,6 +33,17 @@ String str="https://the-internet.herokuapp.com/javascript_alerts";
         driver.switchTo().alert().accept(); //kabul etmek için
 
         driver.switchTo().alert().dismiss(); //iptal etmek için
+
+    }
+    @Test
+    public void basic_auth(){
+        driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+       //  driver.switchTo().alert().sendKeys("admin");
+        //driver.switchTo().alert().sendKeys("admin"+Keys.TAB+"admin"+Keys.TAB);
+
+        WebElement pagemesaj=driver.findElement(By.xpath("//p"));
+        System.out.println(pagemesaj.getText());
+
 
     }
 }
