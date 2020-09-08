@@ -1,0 +1,23 @@
+Selenium Review 5. Ders
+Window Handle : Her bir sekmenin kendine ait benzersiz bir kodu vardır, biz bu koda window handle diyoruz.
+	Örnek :
+		Google  -> CDwindow9DD98SAD8ASD8ASDUSAD8S89AD9ASD
+		Youtube -> CDwindowd6a8hg8g87fg8gf87f8hgf77f8hf7s
+***** Sekmeler arasında geçiş yaparken INDEX KULLANILAMAZ !!!!!
+getWindowHandle() => Bulunduğunuz sayfanın, window handle'ını STRING olarak return eder.
+getWindowHandles() => Açık olan tüm pencerelerin window handle'ları Set<String> şeklinde return edilir.
+driver.switchTo().window(gitmek istediğimiz sayfanın window handle'ı);
+---------------------------ACTIONS CLASS------------------------------
+***** Actions class kullanırken, işlemi bitirmek için her defasında 		  "PERFORM()" yazmak zorundayız.
+contextClick : Sağ tıklama yapmak için kullanılır.
+doubleClick  : İki kere (çift tıklama) yapabiliyoruz.
+moveToElement: Mouse'u hedef webelement'in üzerine götürebiliyoruz.
+keyDown      : Herhangi bir tuşa tıklamak için kullanılır.
+keyUp        : Herhangi bir tuştan elimizi kaldırmak için kullanılır.
+-------------------------SAYFADA AŞAĞI GİTME--------------------------
+sendKeys(Keys.END)   : Sayfanın en aşağısına gidiyoruz.
+sendKeys(Keys.PAGE_DOWN) : Belirli bir oranda sayfanın aşağısına gider.
+sendKeys(Keys.ARROW_DOWN): Düşük bir oranda sayfanın aşağısına gider.
+-------------------------SAYFADA YUKARI GİTME--------------------------
+sendKeys(Keys.PAGE_UP) : Belirli bir oranda sayfanın yukarısına gider.
+sendKeys(Keys.ARROW_UP): Düşük bir oranda sayfanın yukarısına gider.

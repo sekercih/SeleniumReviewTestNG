@@ -43,6 +43,8 @@ String str="https://the-internet.herokuapp.com/javascript_alerts";
 
         WebElement pagemesaj=driver.findElement(By.xpath("//p"));
         System.out.println(pagemesaj.getText());
+        String window=driver.getWindowHandle();
+        System.out.println(window);
 
 
     }
