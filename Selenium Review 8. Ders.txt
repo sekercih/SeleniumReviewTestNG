@@ -1,0 +1,31 @@
+Selenium Review 8. Ders
+FileInputStream : bir dosyayı okumak için Java'nın içerisinde yer alan bir Class'tır.
+	FileInputStream fileInputStream = new FileInputStream(dosyaYolu);
+Properties      : .properties dosyasını okuyabilmek için bu class'tan nesne üretir.
+	Properties properties = new Properties();
+	properties.load(fileInputStream);
+1. ÖRNEK : Pantolon Alt Kategoriler
+a ) https://www.glbtrader.com/listing/Men-Clothing-Accessories-Pants/1/9
+	Bu sayfaya gidelim. Bu sayfaya gitmek için;
+	1- Driver class'ını kullanın.
+	2- Sayfa adresini properties dosyasına ekleyin ve oradan alın.
+	   glb_pantolon = https://www.glb...
+b ) Pages paketinin altında GlbPantsPage isminde bir tane class oluşturun.
+	İçerisinde webElementleri bulun.
+c ) Tests paketinin altında GlbPantsTest isminde bir tane class oluşturun.
+	Bulduğunuz webelementlerin (yani alt kategorilerin) içerdiği yazıları
+	ekrana yazdırın.
+2. ÖRNEK : Yazldızlı Çay Bardağı
+a ) https://www.glbtrader.com/listing/Home-Garden-Kitchen--Dining-Bar/60/67
+	Bu sayfaya gidelim. Bu sayfaya gitmek için;
+	1- Driver class'ını kullanın.
+	2- Sayfa adresini properties dosyasına ekleyin ve oradan alın.
+		glb_kitchen = https://www.glbtr...
+b ) Pages paketinin altında GlbKitPage isminde bir tane class oluşturun.
+	İçerisinde "Yaldızlı Çay Bardağı" ürününü webelemtent şeklinde bulun.
+		@FindBy (partialLinkText = "..")
+	ürünün başlığını webelement şeklinde bulun.
+	ürünün fiyatını webelement şeklinde bulun.
+	ürünün açıklamasını webelement şeklinde bulun.
+c ) Bu webelementlerin içerdiği yazıları ekrana yazdırın.
+	GlbKitTest , tests paketinin altında
