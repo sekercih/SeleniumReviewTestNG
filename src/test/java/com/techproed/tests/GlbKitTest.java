@@ -7,7 +7,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 public class GlbKitTest {
-    @Test
+    @Test(groups = "glbtest")
     public void test(){
 
         GlbKitPage glbKitPage=new GlbKitPage();

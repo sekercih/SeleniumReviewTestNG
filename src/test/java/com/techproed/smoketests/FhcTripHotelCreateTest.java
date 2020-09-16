@@ -37,7 +37,7 @@ public class FhcTripHotelCreateTest extends TestBase {
         Assert.assertTrue(createPage.succes.isDisplayed());
         Assert.assertEquals(createPage.succes.getText(),"Hotel was inserted successfully");
         System.out.println(createPage.succes.getText());
-       createPage.basarili.click();
+       //createPage.basarili.click();
 
     }
 }
