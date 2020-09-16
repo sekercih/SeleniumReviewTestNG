@@ -1,0 +1,12 @@
+Selenium Review 9. Ders
+***** JAVA Microsoft Office Dosyalarını OKUYAMAZ !!!!!
+- Peki biz excel dosyalarını nasıl okuyabiliriz, üzerine yeni bir veri nasıl ekleyebiliriz ?
+Farklı bir kütüphane indirebilir, onun yardımıyla excel dosyalarını okuyabiliriz.  : APACHE POI
+Excel   == Workbook
+Sayfa   == Sheet
+Satır   == Row
+Hücre   == Cell
+String dosyaAdresi = "src/test/resources/ULKELER.xlsx";
+FileInputStream fileInputStream = new FileInputStream(dosyaAdresi);
+Workbook workbook = WorkbookFactory.create(fileInputStream);
+workbook.getSheetAt(0).getRow(0).getCell(0);
