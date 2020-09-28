@@ -20,6 +20,7 @@ public class IframeTest {
 
         driver.get("https://the-internet.herokuapp.com/iframe");
       driver.switchTo().frame("mce_0_ifr");
+
       WebElement pTag=driver.findElement(By.xpath("//p"));
       pTag.clear();
       pTag.sendKeys("Selamlar");

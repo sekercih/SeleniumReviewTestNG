@@ -38,6 +38,7 @@ String str="https://the-internet.herokuapp.com/javascript_alerts";
     @Test
     public void basic_auth(){
         driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+
        //  driver.switchTo().alert().sendKeys("admin");
         //driver.switchTo().alert().sendKeys("admin"+Keys.TAB+"admin"+Keys.TAB);
 

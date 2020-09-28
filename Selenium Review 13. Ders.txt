@@ -1,0 +1,8 @@
+Selenium Review 13. Ders
+Paralel Test Neden Yapılır ? : Zamandan tasarruf sağlamak için.
+	***** Elimizde 100 tane test olsa ve her biri 1 dk sürse. Tüm test işlemimiz yaklaşık 100 dk sürecektir.
+	***** Biz bu 100 testi, paralel bir şekilde çalıştırsak. Yani, 2 tane chrome penceresi açsak ve 50 tanesini bir pencerede, diğer 50 tanesini de diğer pencerede çalıştırsak (aynı anda), 100 dk yerine, tesimiz sadece 50 dk sürer.
+TestNG'de paralel test işlemi  : .xml dosyalarından faydalanarak yapıyorduk.
+	***** parallel , thread-count
+Cucumber'da paralel test işlemi : pom.xml dosyasına plugin'ler ekleyerek yapıyorduk.
+	***** mvn clean verify
